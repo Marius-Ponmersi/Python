@@ -1,27 +1,28 @@
 
-n = 1 # Начальный номер дня
-a = float(input("Введите сколько км пробежал спортсмен в первый день: "))
-b = float(input("Введите сколько км должен пробежать спортсмен: "))
-while a < b:
-    print(f"{n}-ый день: {a}")
-    a = a + a/10
-    n += 1
-print(f"{n}-ый день: {a}")
-print(f"На {n}-ый день спортсмен достиг результата - не менее {b}")
+p = ["название", "цена", "количество", "ед"]  # Параметры
 
-'''
+name_1 = input("Введите названия товара 1: ")
+price_1 = float(input("Введите цену товара 1: "))
+amount_1 = int(input("Введите количество товара 1: "))
+unit = "шт."
+t_1 = [name_1, price_1, amount_1, unit]  # Товар 1
+tovar_1 = dict(zip(p, t_1))
 
-# Вариант с использованием break (но не показывает 1-ый день)
-n = 1 # Начальный номер дня
-a = float(input("Введите сколько км пробежал спортсмен в первый день: "))
-b = float(input("Введите сколько км должен пробежать спортсмен: "))
-while True:
-    a *= 1.1
-    n += 1
-    if a >= b:
-        print(f"{n}-ый день: {a}")
-        print(f"На {n}-ый день спортсмен достиг результата - не менее {b}")
-        break
-    print(f"{n}-ый день: {a}")
+name_2 = input("Введите названия товара 2: ")
+price_2 = float(input("Введите цену товара 2: "))
+amount_2 = int(input("Введите количество товара 2: "))
+t_2 = [name_2, price_2, amount_2, unit]  # Товар 2
+tovar_2 = dict(zip(p, t_2))
 
-'''
+name_3 = input("Введите названия товара 3: ")
+price_3 = float(input("Введите цену товара 3: "))
+amount_3 = int(input("Введите количество товара 3: "))
+t_3 = [name_3, price_3, amount_3, unit]  # Товар 2
+tovar_3 = dict(zip(p, t_3))
+
+structura = [(1, tovar_1), (2, tovar_2), (3, tovar_3)]
+print(f'Структура: {structura}')
+
+analitika = {p[0]:(name_1, name_2, name_3), p[1]: (price_1, price_2, price_3), p[2]: (amount_1, amount_2, amount_3), p[3]: unit}
+print(f'Аналитика: {analitika}')
+
