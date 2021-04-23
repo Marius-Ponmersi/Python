@@ -1,3 +1,4 @@
+
 s = input('Введите несколько слов, разделенных пробелами: ')
 l = s.split()
 for ind, el in enumerate(l, 1):
